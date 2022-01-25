@@ -3,12 +3,12 @@ package com.pdz.criacionais.abstractfactory;
 public class AbstractFactoryMain {
 
     public static void main(String[] args) {
-        TransporteFactory factoryUm = new CaminhaoFactory();
-        var transporteUm = factoryUm.criarTransporte();
-        transporteUm.mostrarTransporte();
+        PerifericosFactory factoryUm = MouseFactory.getInstance();
+        var periferico = factoryUm.criarPeriferico();
+        periferico.mostrarNomePeriferico();
 
-        TransporteFactory factoryDois = new NavioFactory();
-        var transporteDois = factoryDois.criarTransporte();
-        transporteDois.mostrarTransporte();
+        PerifericosFactory factoryDois = TecladoFactory.getInstance();
+        var transporteDois = factoryDois.criarPeriferico();
+        transporteDois.mostrarNomePeriferico();
     }
 }
