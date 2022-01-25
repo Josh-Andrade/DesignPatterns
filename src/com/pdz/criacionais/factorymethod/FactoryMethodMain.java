@@ -1,15 +1,14 @@
 package com.pdz.criacionais.factorymethod;
 
-import static com.pdz.criacionais.factorymethod.TipoTransporte.MARITIMO;
-import static com.pdz.criacionais.factorymethod.TipoTransporte.RODOVIARIO;
-
 public class FactoryMethodMain {
 
     public static void main(String[] args) {
-        var transporteUm = TransporteFactory.criarTransporte(MARITIMO);
+        var factoryUm = CaminhaoFactory.getInstance();
+        var transporteUm = factoryUm.getTransporte();
         transporteUm.mostrarTransporte();
 
-        var transporteDois = TransporteFactory.criarTransporte(RODOVIARIO);
+        var factoryDois = NavioFactory.getInstance();
+        var transporteDois = factoryDois.getTransporte();
         transporteDois.mostrarTransporte();
     }
 }

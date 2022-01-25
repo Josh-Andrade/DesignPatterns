@@ -3,12 +3,19 @@ package com.pdz.criacionais.abstractfactory;
 public class AbstractFactoryMain {
 
     public static void main(String[] args) {
-        PerifericosFactory factoryUm = MouseFactory.getInstance();
-        var periferico = factoryUm.criarPeriferico();
-        periferico.mostrarNomePeriferico();
+        var factoryUm = PerifericosGamerFactory.getInstance();
+        var mouseUm = factoryUm.getMouseGamer();
+        var tecladoUm = factoryUm.getTecladoGamer();
 
-        PerifericosFactory factoryDois = TecladoFactory.getInstance();
-        var transporteDois = factoryDois.criarPeriferico();
-        transporteDois.mostrarNomePeriferico();
+        mouseUm.mostrarNomePeriferico();
+        tecladoUm.mostrarNomePeriferico();
+
+
+        var factoryDois = PerifericosConvencionaisFactory.getInstance();
+        var mouseDois = factoryDois.getMouseConvencional();
+        var tecladoDois = factoryDois.getTecladoConvencional();
+
+        mouseDois.mostrarNomePeriferico();
+        tecladoDois.mostrarNomePeriferico();
     }
 }
