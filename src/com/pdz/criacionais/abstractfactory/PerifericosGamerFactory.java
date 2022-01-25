@@ -1,6 +1,6 @@
 package com.pdz.criacionais.abstractfactory;
 
-public class PerifericosGamerFactory implements GamerFactory{
+public class PerifericosGamerFactory implements PerifericosFactory{
 
     private static PerifericosGamerFactory instance;
 
@@ -14,12 +14,12 @@ public class PerifericosGamerFactory implements GamerFactory{
     }
 
     @Override
-    public MouseGamer getMouseGamer() {
+    public Perifericos getMouse() {
         return new MouseGamer();
     }
 
     @Override
-    public TecladoGamer getTecladoGamer() {
+    public Perifericos getTeclado() {
         return new TecladoGamer();
     }
 }

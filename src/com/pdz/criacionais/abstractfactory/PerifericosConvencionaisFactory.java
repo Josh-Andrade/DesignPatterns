@@ -1,6 +1,6 @@
 package com.pdz.criacionais.abstractfactory;
 
-public class PerifericosConvencionaisFactory implements ConvencionalFactory{
+public class PerifericosConvencionaisFactory implements PerifericosFactory{
 
     private static PerifericosConvencionaisFactory instance;
 
@@ -14,12 +14,12 @@ public class PerifericosConvencionaisFactory implements ConvencionalFactory{
     }
 
     @Override
-    public MouseConvencional getMouseConvencional() {
+    public Perifericos getMouse() {
         return new MouseConvencional();
     }
 
     @Override
-    public TecladoConvencional getTecladoConvencional() {
+    public Perifericos getTeclado() {
         return new TecladoConvencional();
     }
 }
